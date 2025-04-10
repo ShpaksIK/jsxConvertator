@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+body {
+    background: -webkit-linear-gradient(90deg, #5f5483,#00a1cd);
+    background: linear-gradient(90deg, #5f5483,#00a1cd);                                  
+}
+
+h1 {
+    color: #fff;
+    text-align: center;
+    font-size: 3rem;
+    margin: 20px 0;
+}
+
+p {
+    color: #fff;
+    font-size: 1rem;
+}
+
+.selectedText {
+    color: #97e9ff;
+}
+
+.boxes {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+.box-input {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.box-input__input-module {
+    display: none;
+}
+
+.box-input__input-more {
+    display: none;
+}
+
+.box-output {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+textarea {
+    font-family: 'Courier New', Courier, monospace;
+    padding: 10px;
+    font-size: 1.1rem;
+    resize: none;
+    outline: none;
+    background-color: #ffffffd5;
+    border-radius: 10px;
+    border: 1px solid rgb(68, 150, 238);
+}
+
+input {
+    padding: 5px 10px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    background-color: #ffffffd5;
+    border: 1px solid rgb(68, 150, 238);
+    outline: none;
+}
+
+input[type='text'] {
+    width: 100%;
+    max-height: 35px;
+}
+
+select {
+    width: 100%;
+    padding: 5px 10px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    background-color: #ffffffd5;
+    border: 1px solid rgb(68, 150, 238);
+    outline: none;
+    cursor: pointer;
+}
+
+option {
+    background-color: #fff;
+}
+
+button {
+    width: 200px;
+    max-height: 35px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: rgb(68, 150, 238);
+    cursor: pointer;
+    color: #fff;
+    font-size: 1.2rem;
+    outline: none;
+    border: 1px solid #fff;
+    align-self: center;
+}
+
+button:hover {
+    transition: .1s;
+    background-color: #00a1cd;
+}
+
+.box-input__input-button {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.box-input__input-button > input {
+    width: 40%;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.box-input__input-button > button {
+    width: 60%;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+@media screen and (max-width: 590px) {
+    textarea {
+        width: 100%;
+        columns: 5;
+    }
+}

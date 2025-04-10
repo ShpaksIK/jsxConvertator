@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Raleway:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <title>Конвертировать из HTML в JSX</title>
+</head>
+<body>
+    <!-- gwethwtehwe -->
+    <h1>Конвертировать из HTML в JSX</h1>
+    <div class="boxes">
+        <div class="box-input">
+            <div class="box-input__input">
+                <p>Введите HTML код</p>
+                <textarea rows="30" cols="50" id="textHtml"></textarea>
+            </div>
+            <div class="box-input__input">
+                <p>Способ подключения классов CSS</p>
+                <select id="connectType">
+                    <option value="standart" selected>Стандартный: className="класс"</option>
+                    <option value="module">Модульный: className={style.класс}</option>
+                    <option value="more">Другое</option>
+                </select>
+            </div>
+            <div class="box-input__input box-input__input-module" id="connectType_module">
+                <p>Введите название переменной для стилей</p>
+                <input type="text" id="nameClassName" placeholder="style по умолчанию">
+            </div>
+            <div class="box-input__input box-input__input-more" id="connectType_more">
+                <p>Введите свой синтаксис после <span class="selectedText">className=</span></p>
+                <p>Используйте <span class="selectedText">&lt;class&gt;</span>, чтобы вставить переменную для имени класса</p>
+                <input type="text" id="inputTypeMore">
+            </div>
+            <button id="convertButton">Получить JSX</button>
+        </div>
+    
+        <div class="box-output">
+            <div class="box-input__input">
+                <p>Полученный JSX</p>
+                <textarea rows="30" cols="50" id="textJSX" readonly></textarea>
+            </div>
+            <div class="box-input__input-button">
+                <input id="fileNameInput" type="text" placeholder="Название файла">
+                <button id="downloadBtn">Скачать <span id="fileNameOutput">file</span>.jsx</button>
+            </div>
+            <button id="copyJSX">Копировать</button>
+        </div>
+    </div>
+        
+    <script src="./assets/js/converter.js"></script>
+</body>
+</html>
