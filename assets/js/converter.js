@@ -88,7 +88,9 @@ const createReactComponent = (jsx) => {
     return `import React from "react";
 
 const Component = () => {
-    ${jsx}
+    <>
+        ${jsx}
+    </>
 }
 
 export default Component;`
